@@ -48,6 +48,33 @@ def save_data():
     with open("tasks.json", "w") as file:
         json.dump(tasks_data, file)
 
+@bot.command(name="bothelp")
+async def bot_help(ctx):
+    """List all bot commands with explanations."""
+    help_message = """
+**Pomodoro Bot Commands**
+
+**Task Management:**
+1. `!addtask <task>` - Add a task to your task list for the day.
+2. `!viewtasks` - View your tasks for today.
+3. `!deletetask <task_number>` - Delete a task by its number from your task list.
+
+**Pomodoro Session Management:**
+1. `!start <minutes>` - Start a Pomodoro session with a customizable duration (default is 25 minutes).
+2. `!join` - Join an ongoing Pomodoro session.
+3. `!status` - Check the status of the current Pomodoro session, including remaining time and participants.
+4. `!stop` - Stop the current Pomodoro session.
+
+**Leaderboard:**
+1. `!leaderboard` - View the leaderboard of users by completed focus sessions.
+
+**Additional Commands:**
+1. `!bothelp` - List all bot commands with explanations.
+
+"""
+    await ctx.send(help_message)
+
+
 @bot.event
 async def on_ready():
     load_data()
