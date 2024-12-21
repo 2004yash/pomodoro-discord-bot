@@ -41,7 +41,7 @@ A productivity-focused Discord bot designed to help users stay organized and eff
 ### Setup
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/pomodoro-discord-bot.git
+   git clone https://github.com/2004yash/pomodoro-discord-bot.git
    cd pomodoro-discord-bot
    ```
 2. Install dependencies:
